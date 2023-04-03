@@ -134,7 +134,25 @@ print(greet[6:], end='\n\n') #world
 # 3. striding[i:j:k]
 print('string striding')
 print(greet[0:6:2]) # hlo
-print(greet[0::2]) # hlowrd
+print(greet[0::2],end='\n\n') # hlowrd
+
+# User expression, variables or operator as an index as long as the value is an integer
+print('using expression')
+print(greet[1+2]) # l
+print(greet[len(greet) - 1], end='\n\n') # d
+
+# traversing through string
+print('traversing string')
+for i in enumerate(greet):
+    print(i)
+    
+# Inserting values into string
+greet = greet[:5] + ' wondeful' + greet[5:]
+print('\n')
+print(greet)
+x = '3'; y = '4'
+print(x+y) # concatenation => 34
+print(int(x) + int(y)) # addition => 7
 
 
 
