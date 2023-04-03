@@ -115,7 +115,26 @@ print('lstrip method')
 print(s, s.lstrip()) # abcd
 print(s.lstrip('a')) # bcd
 print(s.lstrip('b')) # abcd
-print(s.lstrip('ab')) # cd
+print(s.lstrip('ab'),end='\n\n') # cd
+
+# Strings, like all sequence types, support indexing and slicing.
+# 1. indexing => s[i] 
+greet = 'hello world'
+print('string indexing')
+print(greet[0]) # h
+print(greet[1]) # e
+print(greet[-1], end='\n\n') # d
+
+# 2. slicing[i:j]
+print('string slicing')
+print(greet[0:6]) #hello
+print(greet[:6]) # hello
+print(greet[6:], end='\n\n') #world
+
+# 3. striding[i:j:k]
+print('string striding')
+print(greet[0:6:2]) # hlo
+print(greet[0::2]) # hlowrd
 
 
 
