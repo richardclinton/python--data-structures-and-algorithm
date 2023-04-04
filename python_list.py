@@ -88,4 +88,14 @@ list1 = [x,y,z]
 list2 = list1
 print(list1,list2)
 list2[1] = 4
-print(list1,list2)
+print(list1,list2, end='\n\n')
+
+# An important feature of list is that it can contain nested structures; that is list can contain other lists.
+items = [['rice',2.4,8],['flour',1.9,5],['corn',4.7,6]]
+for item in items:
+    print("Product: %s Price: %f Quality: %i" % (item[0],item[1],item[2]))
+    
+print('\n\n')
+items[1][1] = items[1][1] * 1.2
+print(items[1][1])
+ 
