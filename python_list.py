@@ -76,3 +76,16 @@ def my_func(e):
     return len(e)
 fruit.sort(key=my_func)
 print(fruit,end='\n\n') # ['apple','mango','banana','pawpaw','ovacado']
+
+# In python list implementation is different compared to other languages.
+# Python does not create multiple copies of variable. Fore xample, when we assign a value
+# of one variable in another variable, both variables point to the same memory address where
+# the value is stored. A copy would only be allocated if the variable changes their values.
+# This feature makes python memory efficient, in the sense that it only creates multiple copies 
+# when it is required.
+x = 1; y = 2; z = 3
+list1 = [x,y,z]
+list2 = list1
+print(list1,list2)
+list2[1] = 4
+print(list1,list2)
