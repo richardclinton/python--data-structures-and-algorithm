@@ -98,4 +98,31 @@ for item in items:
 print('\n\n')
 items[1][1] = items[1][1] * 1.2
 print(items[1][1])
- 
+
+# list comprehension
+l = [2,4,6,8]
+l = [i**3 for i in l]
+print(l,end='\n\n')
+
+# list comprehension and function composition
+def f1(x): return x*2
+def f2(x): return x*4
+
+lst = []
+for i in range(16):
+    lst.append(f1(f2(i))) 
+    
+print("function composition")
+print(lst)
+print('list comprehension')
+print([f1(x) for x in range(64) if x in [f2(j) for j in range(16)]],end='\n\n')
+
+# list comprehension => replicate the action of nested loop in a more compact form
+lst = [[1,2,3],[4,5,6]]
+print([i*j for i in lst[0] for j in lst[1]]) # [4,5,6,8,10,12,12,15,18]
+
+# user list comprehension with other objects such as string, to build more complex object.
+s = 'here is a sentence'
+words = s.split()
+result = [[word, len(word)] for word in words]
+print(result) # [['here',4],['is',2],['a',1],['sentence',8]]
