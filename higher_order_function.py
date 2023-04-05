@@ -7,5 +7,13 @@
 # Note the use of the `lambda` anonymous function.
 
 lst = [1,2,3,4]
+print('map function')
 for item in map(lambda n: n*2, lst):
+    print(item)
+print('\n\n')
+    
+# Similarly, we can use thefilter() built-in function to filter items in a list
+lst = [1,2,3,4]
+print('filter function')
+for item  in filter(lambda m: m<4,lst):
     print(item)
