@@ -17,3 +17,21 @@ lst = [1,2,3,4]
 print('filter function')
 for item  in filter(lambda m: m<4,lst):
     print(item)
+    
+# Note that both filter() and map() functions perform the same functions similar to
+# what can be archieved by list comprehension.
+# Creating our own higher order function is the one of the hallmarks of functional programming style.
+# A practical example of how higher order functions can be useful is demostrated by the following.
+words = str.split("The longest word in this sentence")
+result = sorted(words, key=len)
+print("sorted function")
+print(result,end='\n\n')
+
+# Example for case-insensitive sorting
+sl = ['A','b','a','C','c']
+print('Case-insensitive sorting')
+sl.sort(key=str.lower)
+print(sl)
+print('Case sensitive sort')
+sl.sort()
+print(sl, end='\n\n')
