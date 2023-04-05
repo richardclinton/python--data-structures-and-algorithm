@@ -44,3 +44,8 @@ print(sl, end='\n\n')
 # On the other hand, the sorted() built-in function returns a new list. It actually accepts any iterable
 # object as an argument, but it will always return a list. Both `list sort` and `sorted` take two optional keyword
 # arguments as key.
+
+# A simple way to sort more complex structure is to use the index of the element to sort, using the `lambda` operator
+items = [['rice',2.4,8],['flour',1.9,5],['corn',4.7,6]]
+items.sort(key=lambda item: item[1])
+print(items)
