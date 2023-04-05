@@ -22,3 +22,11 @@ def greeting(language):
 # in other objects, such as lists.
 l = [greeting('eng'),greeting('fr'),greeting('ger')]
 print(l[1])
+
+# Function can also be used as arguments for other functions.
+def call(f):
+    lang = 'eng'
+    return (f(lang))
+
+result = call(greeting)
+print(result)
