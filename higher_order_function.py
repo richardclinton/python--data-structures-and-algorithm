@@ -35,3 +35,12 @@ print(sl)
 print('Case sensitive sort')
 sl.sort()
 print(sl, end='\n\n')
+
+# Note the difference between list.sort() method and the sorted() built-in
+# function. The list.sort() method, a method of the list object, sorts the existing instance of a list
+# without copying it. This method changes the target object and returns None. It is an important convention in Pyhthon
+# that functions or methods that change the object return None, to make it clear that no new object was created
+# and that the object itself was changed.
+# On the other hand, the sorted() built-in function returns a new list. It actually accepts any iterable
+# object as an argument, but it will always return a list. Both `list sort` and `sorted` take two optional keyword
+# arguments as key.
