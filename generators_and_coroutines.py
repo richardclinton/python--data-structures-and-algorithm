@@ -36,4 +36,14 @@ print("The time to build and sum a list: %f" % (time.time()-t1))
 # oddList generator function created in the preceding code to print out odd integers between 1 and 10
 for i in oddList(1,10):print(i)
 
-# 
+# we can also create a generator expression, which, apart from replacing square brackets with parentheses,
+# uses the same syntax and carries out the same operation as list comprehension. Generator expressions, however,
+# do not create a list; they create a generator object. This object does not create the data, but rather creates
+# that data on demand. This means that generator objects do not support sequence methods such as append() and insert()
+
+# Yo can, however, change a generator into a list using the list() function
+lst1 = [1,2,3,4]
+gen1 = (10**i for i in lst1)
+print(gen1, end='\n\n')
+for x in gen1:
+    print(x)
