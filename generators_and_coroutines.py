@@ -30,3 +30,10 @@ print("Time to sum an iterator: %f" % (time.time()-t1))
 t1 =  time.time()
 sum(oddList(1,1000000))
 print("The time to build and sum a list: %f" % (time.time()-t1))
+
+# Generators never return a value rather than None
+# Typically, generator objects are used in for loops. For example, we can make use of the
+# oddList generator function created in the preceding code to print out odd integers between 1 and 10
+for i in oddList(1,10):print(i)
+
+# 
