@@ -9,7 +9,7 @@
 class Employee(object):
     numEmployee=0
     
-    def init(self, name, rate):
+    def __init__(self, name, rate):
         self.owed = 0
         self.name = name
         self.rate = rate
@@ -21,7 +21,7 @@ class Employee(object):
         
     def hours(self,numHours):
         self.owed += numHours * self.rate
-        return (".%.2f hours worked" % numHours)
+        return ("%.2f hours worked" % numHours)
     
     def pay(self):
         self.owed = 0
