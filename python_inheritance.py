@@ -62,4 +62,11 @@ print(isinstance(b, Employee))
 # It does not perform any operations on the instance and it is defined using the `@staticmethod` class decorator
 # Static methods can not access the attributes of an instance, so their common usage is as a convinience to group
 # utility functions together.
+
+# A class method operates on the class itself and does not work with the instnce. A class
+# method works in the same way that class variables are associated with the classes rather than instances
+# of the class. Class methods are defined using the `@classmethod` decorator and distinguished from instance
+# methods in the class.It is passed as first argument, and this is names as `cls` by convention.
+# The `exponentialB` class inherits from the `exponentialA` class and changes the base class variable to `4`
+# We can also run the parent class's `exp()` method as follows.
         
