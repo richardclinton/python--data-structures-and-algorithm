@@ -47,12 +47,12 @@ class SpecialEmployee(Employee):
 # `True` if `obj1` belongs to the class of `obj2
 # issubclass() => to check whether a class is a subclass of another class
 # isinstance() => to check if an object belongs to a class or not
-print(issubclass(SpecialEmployee, Employee), end='\n\n')
-print(issubclass(Employee, SpecialEmployee), end='\n\n')
+print(issubclass(SpecialEmployee, Employee))
+print(issubclass(Employee, SpecialEmployee))
 
 d = SpecialEmployee('Packt',20, 100)
 b = Employee('Packt', 20)
-print(isinstance(b, SpecialEmployee),end='\n\n')
+print(isinstance(b, SpecialEmployee))
 print(isinstance(b, Employee))
 
 # Generally, all the methods operate on the instance of a class defined within a class.
@@ -69,4 +69,33 @@ print(isinstance(b, Employee))
 # methods in the class.It is passed as first argument, and this is names as `cls` by convention.
 # The `exponentialB` class inherits from the `exponentialA` class and changes the base class variable to `4`
 # We can also run the parent class's `exp()` method as follows.
-        
+
+class ExponentialA(object):
+    base = 3
+    
+    @classmethod
+    def exp(cls,x):
+        return (cls.base ** x)
+    
+    
+    @staticmethod
+    def addition(x,y):
+        return (x+y)
+    
+class ExponentialB(ExponentialA):
+    base = 4
+    
+    
+a = ExponentialA()
+b = a.exp(3)
+print("The value: 3 to the power 3",b)
+print("The sum is:",ExponentialA.addition(15, 10))
+print(ExponentialB.exp(3))
+
+
+# The difference between a `class` method and a static method is that a static method doesn't 
+# know anything about the class, it is only deals with the parameters, whereas the class method works
+# only with the class, and its parameter is always the class itself.
+# There are several reasons why class methods may be useful.For example, because a subclass inherits
+# all the same features of its parent, there is potential for it to break inherited methods. Using 
+# class methods is a way to define exactly what methods are run.
