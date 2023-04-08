@@ -10,3 +10,10 @@
 # It is recommended to use private attributes when using a class property to define mutable attributes. A property is a
 # kind of attribute that rather returning a stored value computes its value its value when called.
 # For example we could redefined the `exp()` property with the following.
+
+
+class Bexp(Aexp):
+    base = 3
+    
+    def exp(self):
+        return (x**cls.base)
