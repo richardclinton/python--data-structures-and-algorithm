@@ -54,4 +54,12 @@ d = SpecialEmployee('Packt',20, 100)
 b = Employee('Packt', 20)
 print(isinstance(b, SpecialEmployee),end='\n\n')
 print(isinstance(b, Employee))
+
+# Generally, all the methods operate on the instance of a class defined within a class.
+# However, it is not a requirement. There are two types of methods, `static` methods and `class` methods.
+# A static method is quite similar to a class method, which is mainly bound to the class, and not bound with the
+# object of the class. It is defined within a class and does not require an instance of the class to execute.
+# It does not perform any operations on the instance and it is defined using the `@staticmethod` class decorator
+# Static methods can not access the attributes of an instance, so their common usage is as a convinience to group
+# utility functions together.
         
