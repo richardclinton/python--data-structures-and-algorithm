@@ -21,4 +21,12 @@ d = b //  a
 print("\n\n")
 print(d, "is of type", type(d))
 print(7/5) # true devision
-print(-7//5) # floor devision operator
+print(-7//5,end='\n\n') # floor devision operator
+
+# The exponent operator (**) can be used to get the power of a number (for example x**y),
+# and the modulus operator (%) returns the reminder of the of the devision(for example a%b retuens the reminder of a/b)
+a = 7; b = 5
+
+e = b**a # The operator (**) calculate the power
+print(e)
+print(a%b)
