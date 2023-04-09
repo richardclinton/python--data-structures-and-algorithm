@@ -39,4 +39,26 @@ if type(a) is type(b): # `a` and `b` are the same type
 # Immutable objects
 # => such as `strings` cannot have their value changed, so when we run their methods,
 #    they simply return a value rather than change a value of underlying object.
-# 
+
+
+# Python data types can be devided into three categories: numeric, sequence and mapping.
+# There is also None object that represents Null, or the absence of a value. It should not forgotten
+# that other objects such as classes, files and exceptions can also properly be considered `types`.
+# Python build-in data types are outlined below
+# a. None
+# 1. None => It is a null object
+# b. Numeric
+# 1. int => This is an integer data type
+# 2. float => This data type can store a floating-point number.
+# 3. complex => It stores a complex number
+# 4. bool => It is boolean type and returns True or False
+# c. Sequence
+# 1. str => It is used to store a string of characters
+# 2. list => It can store a list of arbitrary objects
+# 3. tuple => It can store a group  of arbitrary items.
+# 4. range => It is used to create a range of integers.
+# d. Mapping
+# 1. dict => It is a dictionery data type that stores data in key/value pairs.
+# 2. set => It is a mutable and unordered collection of unique items.
+# 3. frozenset => It is an immutable set.
+
