@@ -43,4 +43,27 @@ print(f.real)
 print(f.imag)
 print(f*2)
 print(f+3)
-print(f-1)
+print(f-1,end='\n\n')
+
+# Boolean
+# Are represented using truth values, that is, `True` and `False`; it is similar to `0` and `1`.
+# There is a `bool` class in python, which returns True or False. Boolean values can be combined
+# with logical operators such as `and`, `or` and `not`.
+print("Boolean")
+print(bool(2))
+print(bool(-2))
+print(bool(0))
+
+# A Boolean operation returns either True or False. Boolean oparations are ordered in priority, so if more
+# than one Boolean operation occurs in an expression, the operation with the highest will occur first.
+# Below are three boolean operators in descending order of priority.
+# 1. not x => It returns False if x is True, and returns True if x is False.
+# 2. x and y => it returns True if x and y are both True; otherwise it returns False.
+# 3. x or y => It returns True if either x or y is True; otherwise it retuens False.
+
+
+# Python is very efficient when evaluating a Boolean expressions as it will only evaluate an
+# operator if it needs to. For example if x is True in an expression x or y, there is no need to
+# evaluate y since the expression is True anyway,that is why in Python y is not evaluated.
+# Similarly, in an expression `x and y`, if x is False, the interpreter will simply evaluate x and
+# return False, without evaluating y.
