@@ -52,7 +52,7 @@ print(f-1,end='\n\n')
 print("Boolean")
 print(bool(2))
 print(bool(-2))
-print(bool(0))
+print(bool(0),end='\n\n')
 
 # A Boolean operation returns either True or False. Boolean oparations are ordered in priority, so if more
 # than one Boolean operation occurs in an expression, the operation with the highest will occur first.
@@ -67,3 +67,18 @@ print(bool(0))
 # evaluate y since the expression is True anyway,that is why in Python y is not evaluated.
 # Similarly, in an expression `x and y`, if x is False, the interpreter will simply evaluate x and
 # return False, without evaluating y.
+
+# Comparison operators (<,<=,>,>=,==,!=)
+# This operators works with numbers, lists, and other collection objects and return True if the
+# condition holds. For collection objects,comparison operators compare the number of elements and
+# the equivalence operator (==) returns True if each collection object is structurally equivalent, and 
+# the value of each element is identical
+
+see_boolean = (4 * 3 > 10) and (6 + 5 >= 11) 
+print("Comparison operator")
+print(see_boolean)
+
+if (see_boolean):
+    print("Boolean expression returned True")
+else:
+    print("Boolean expression returned False")
