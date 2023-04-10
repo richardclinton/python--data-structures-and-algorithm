@@ -30,3 +30,9 @@ a = 7; b = 5
 e = b**a # The operator (**) calculate the power
 print(e)
 print(a%b)
+
+
+# Complex numbers are represented by two floating-pint numbers. They are assigned using the `j` operator
+# to signify the imaginary part of the complex number. We can access the real and imaginary part with
+# `f.real` and `f.imag`, respectively. Complex numbers are generally used for scientific computations.
+# Python supports addition, substraction, multiplication, power, conjugates, and so forth on complex numbers.
