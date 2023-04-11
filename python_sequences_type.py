@@ -19,7 +19,7 @@ print(len(s))
 s = range(5)
 print(len(s),end='\n\n')
 
-# 2. min(s, [,default=obj],key=func) => Return the minimum value in s(alphabetically for strings)
+# 2. min(s, [,default=obj],key=func) => Return the minimum value in s(alphabetically for strings).
 print("min method")
 s = [3,5,7,1,8]
 print(min(s))
@@ -27,4 +27,24 @@ s = "clinton"
 print(min(s))
 s = ['Asha','Juma','Ali','Amina','Absa']
 print(min(s))
-print(min(s, key=len))
+print(min(s, key=len),end='\n\n')
+
+# 3. max(s,[,default=obj], key=func) => Returns the maxmum value in s (Alphabetically for strings).
+print("max method")
+s = [1,2,3,4,5,6,7,8,9]
+print(max(s))
+s = "clinton"
+print(max(s))
+s = ['Asha','Juma','Ali','Amina','Absa','Zahoro','Mwantumu']
+print(max(s))
+print(max(s,key=len),end='\n\n')
+
+# 4. sum(s,[,start=0]) => Returns the sum of elemts (returns TypeError id if s in not numeric)
+print("sum method")
+s = [1,2,3,4,5]
+print(sum(s))
+print(sum(s,start=10))
+print(sum(range(10)))
+print(sum([1,2,3,4,5,6,7,8,9]))
+s = (4,5,1)
+print(sum(s))
