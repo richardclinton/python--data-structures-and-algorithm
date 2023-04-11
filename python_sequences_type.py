@@ -70,4 +70,71 @@ print("any methods")
 s = [1,2,3]
 print(any(s))
 s = [0,1]
-print(any(s))
+print(any(s), end='\n\n')
+
+# In addition, all sequences support the following operations
+# 1. s+r => concatenates two sequnces of the same type
+print("s+r operation")
+s = [1,2,3]
+r = [4,5,6]
+print(s+r)
+s = "clin"
+r ="ton"
+print(s+r)
+s = (1,2,3)
+r = (4,5,6)
+print(s+r,end='\n\n')
+
+# 2. s*n => make n copies of s, where n is an integer.
+print("s*n operation")
+s = [1,2,3]
+n = 3
+print(s*n)
+s = "paw"
+n = 2
+print(s*n, end="\n\n")
+
+# 3. v1, v2, ..., v n=s => unpacks n variables from s to v1, v2 and so on.
+print("unpack operation, v1, v2,...v n=s")
+a,b,c,d = [1,2,3,4]
+print(a,d, end='\n\n')
+
+# 4. s[i] => Indexing returns the i element of s.
+print("s[i] indexing operation")
+s = [1,2,3]
+print(s[1])
+s = "clinton"
+print(s[4])
+s = range(10)
+print(s[5])
+s = (1,4,7,9,10)
+print(s[-1],end='\n\n')
+
+# 5. s[i:j:stride] => Slicing returns element between i and j with optional stride
+print("s[i:j:stride] operation")
+s = [1,2,3,4,5,6,7,8,9]
+print(s[1:7])
+print(s[2:7:2],end='\n\n')
+
+# 6. x in s => Returns True if x element is in s
+print("x in s operation")
+s = [1,2,3,4,5]
+print(2 in s)
+print(11 in s)
+print('a' in s)
+s = range(9)
+print(0 in s)
+print(9 in s)
+s = "clinton"
+print('l' in s)
+print("a" in s)
+s = (1,2,3,4,5,6)
+print(6 in s)
+print('6' in s, end='\n\n')
+
+# 7. x not in s => Returns True if the x element is not in s.
+print("x not in s operation")
+s = [1,2,3,4]
+print(5 not in s)
+print(1 not in s)
+
