@@ -121,8 +121,20 @@ print(a)
 b = fractions.Fraction(0.5)
 print(b)
 c = fractions.Fraction("0.25")
-print(c)
+print(c,end='\n\n')
 
 # It is also worth mentioning here the NumPy extension. This has types for
 # mathematical objects, such as arrays, vectors,and matrices, and capabilties for linear algebra,calculation 
 # of Fourier transforms, eigenvectors, logical operations, and much more.
+
+# Membership, Identity and logical operations.
+# => Membership operators (in and not in) test for variables in sequence, such as lists or string, and 
+# do what you would expect; `x in y`, returns True if an x variable if found in y.
+# The `is` operator compares object identity. Exmpale
+x = [1,2,3]
+y = [1,2,3]
+print("Membership, identity and logical operations")
+print(x==y) # test equivalence
+print(x is y) # test object identity
+x=y # assignment
+print(x is y)
