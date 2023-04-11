@@ -47,4 +47,27 @@ print(sum(s,start=10))
 print(sum(range(10)))
 print(sum([1,2,3,4,5,6,7,8,9]))
 s = (4,5,1)
-print(sum(s))
+print(sum(s),end='\n\n')
+
+# 5. all(s) => Returns True if all element in s are True(that is, not 0, False or Null)
+print("all method")
+s = [1,2,3,4,5]
+print(all(s))
+s = [1,2,3,0]
+print(all(s))
+s = ["a","b"]
+print(all(s))
+s = ["a","b",None]
+print(all(s))
+s = [True,True]
+print(all(s))
+s = [False, True]
+print(all(s))
+print(all(range(0,3)), end='\n\n')
+
+# any(s) => Checks whether any item in s is True
+print("any methods")
+s = [1,2,3]
+print(any(s))
+s = [0,1]
+print(any(s))
