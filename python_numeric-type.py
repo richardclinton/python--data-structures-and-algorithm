@@ -79,6 +79,50 @@ print("Comparison operator")
 print(see_boolean)
 
 if (see_boolean):
-    print("Boolean expression returned True")
+    print("Boolean expression returned True",end='\n\n')
 else:
-    print("Boolean expression returned False")
+    print("Boolean expression returned False",end='\n\n')
+
+
+# Representation Error  
+# It should be that native double precision representation of floatin-point numbers leads to
+# some unexpected result. Example
+a = 1 - 0.9
+print("representation error")
+print("1-0.9=>",a)
+print(1-0.9 == .1,end='\n\n')
+# This is a result of the fact that most decimal fractions are not exactly representable as
+# binary fraction, which is how most underlying hardware represents floating-point numbers.
+# For algorithms or application where this may be an issue,Python provides a decimal module. This
+# module allows for the exact representation of decimal numbers and facilitates greater control of properties,
+# such as rounding behaviour, number of significant digits, and precision.
+# It defines two object, a `Decimal` type, representing decimal numbers and a `Context` type, representing 
+# various computational parameters such as precision, rounding and error handling. Example
+
+import decimal
+print("Decimal module")
+x = decimal.Decimal(3.14)
+y = decimal.Decimal(2.74)
+z = x * y
+print(z)
+decimal.getcontext().prec = 4
+z = x * y
+print(z,end='\n\n')
+# Here we have created a global context and set the precision to 4. The `Decimal` objects can
+# be treated pretty much as you would treat `int` and `float`. They are subject to all to of the same mathematical
+# operations and can be used as dictionery keys, placed in sets, and so on. In additon `Decimal` objects
+# also have several methods for mathematical operations, such as natural exponents, `x.exp()`, natural logarithms,`x.ln()`,
+# and base 10 logarithms, `x.log10()`. Python also has fractions module that implements a rational number type.
+import fractions
+
+a = fractions.Fraction(3,4)
+print("fractions.module")
+print(a)
+b = fractions.Fraction(0.5)
+print(b)
+c = fractions.Fraction("0.25")
+print(c)
+
+# It is also worth mentioning here the NumPy extension. This has types for
+# mathematical objects, such as arrays, vectors,and matrices, and capabilties for linear algebra,calculation 
+# of Fourier transforms, eigenvectors, logical operations, and much more.
