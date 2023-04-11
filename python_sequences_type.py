@@ -136,5 +136,28 @@ print('6' in s, end='\n\n')
 print("x not in s operation")
 s = [1,2,3,4]
 print(5 not in s)
-print(1 not in s)
+print(1 not in s, end='\n\n')
 
+# Example
+print("Some operations on list")
+lst = list()
+list1 = [1,2,3,4]
+list1.append(1) # append value 1 at the end of the list.
+print(list1)
+list2 = list1*2
+print(list2)
+print(min(list1))
+print(max(list1))
+list1.insert(0,2) # insert value 2 at index 0
+print(list1)
+list1.reverse()
+print(list1)
+list2 = [11,12]
+list1.extend(list2)
+print(list1)
+print(sum(list1))
+print(len(list1))
+list1.sort()
+print(list1)
+list1.remove(12) # remove value 12 from the list
+print(list1)
