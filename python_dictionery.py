@@ -182,4 +182,44 @@ def corder(string):
 # We can then use this as the key to our sorted function to sort each
 # element by its last letter:
 lst_sorted = sorted(d2.values(), key=corder)
-print(lst_sorted)
+print(lst_sorted,end='\n\n')
+
+# Dictionaries for text analysis
+# A common use of dictionary is to count the occurrences of like items in a sequence.
+# A typical example is counting occurrences of words in a body of text.
+# The follwoing code creates a dictionary where each word in the text is used as a key and number of 
+# occurrences as its value. This uses a very common idiom of nested loops. Here we are using it to
+# traverse the lines in a file in an outer loop and the keys of a dictionary on the inner loop.
+
+def wordcount(fname):
+    try:
+        fhand = open(fname)
+    except:
+        print("File can not be opened")
+        exit()
+        
+    count = dict()
+    for line in fhand:
+        words = line.split()
+        for word in words:
+            if word not in count:
+                count[word] = 1
+            else:
+                count[word] += 1
+    return count
+
+# This will return a dictionary with an element for each unique word in the text file.
+# A common task is to filter items such as these into subset we are interested in. You will need
+# a text file saved in the same directory as you run the code. Here we have used `alice.txt`, a short
+# excerpt from Alice in Wonderland. In the following code we can create anaother dictionary `filtered`,
+# containing a subset of items from `count`
+
+count = wordcount('alice.txt')
+print("text analysis")
+print(count, end='\n\n')
+filtered = {key:value for key, value in count.items() if value < 20 and value > 16}
+print("filtered dictionery")
+print(filtered)
+
+# Note the use of dictionary comprehension used to construct the filtered dictionary.
+# Dictionary comprehension works in an identical way to the list comprehensions.
