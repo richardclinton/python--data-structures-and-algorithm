@@ -65,4 +65,48 @@ print(a.symmetric_difference(t),end='\n\n')
 print('union method')
 print('a',a)
 print('t',t)
-print('a.union(t)', a.union(t))
+print('a.union(t)', a.union(t),end='\n\n')
+
+# The `t` parameter can be any Python iterator object that supports iteration
+# and all methods are available to both `set` and `frozenset` objects. It is
+# important to be aware that the operator versions of these methods require their
+# arguments to be sets, whereas  the methods themselves can accept any
+# iterable type. For example,s-[1,2,3], for any set `s`, will generate unsupported
+# operand type. Using the equivalent, s.difference([1,2,3]) will return a result. Example
+s = {1,2,3,4,5}
+print('s',s)
+print("s.difference([1,2,3])",s.difference([1,2,3]),end='\n\n')
+# print('s-[1,2,3]',s-[1,2,3]) => Unsupportes operand type
+
+# Mutable set object have addtional methods.
+# 1. s.add(item) => Adds an item to s; nothing happens if an item is already added.
+s = {2,4,6,8}
+print("add method")
+print('s',s)
+s.add(10)
+print('s.add(10)',s)
+s.add(4)
+print('s.add(4)',s,end='\n\n') # nothing happen if an item is already added
+# 2. s.clear() => Removes all elements from the set,s.
+print("clear method")
+print('s',s)
+s.clear()
+print('s.clear()',s,end='\n\n')
+# 3. s.difference_update(t) => Removes those elements from the `s` set that are also in the other set,`t`.
+s = {2,4,6,8}
+t = {1,2,3,4,5,6}
+print('difference_update method')
+print('s',s)
+print('t',t)
+s.difference_update(t)
+print('s.diffrence_update(t)',s,end='\n\n')
+# 4. s.discard(item) => Removes item from the set,s.
+s = {2,4,6,8}
+print("discard method")
+print('s',s)
+s.discard(8)
+print('s.discard(8)',s)
+
+
+
+
