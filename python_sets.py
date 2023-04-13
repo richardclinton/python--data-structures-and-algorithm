@@ -186,5 +186,26 @@ print('s1',s1)
 for element in s1:
     print(element)
 
+print(end='\n\n')
+# Immutable sets
+# Python has an immutable set type called `frozenset`. It works pretty much exactly like `set`, apart
+# from not allowing methods or operations that change values such as the `add` or `clear` methods.
+# There are several ways that this immutability can be useful.
+# For example, since nomal sets are mutable and therefore not hashable, they can not be used as members
+# of other set.
+print("immutable set")
+print('s1',s1)
+print('s2',s2)
+# s1.add(s2) Unashable set type
+s1.add(frozenset(s2))
+print(s1,end='\n\n')
+
+# Also, the immutability property of `frozenset` means we can use it for a key to dcitionary.
+fs1 = frozenset(s1)
+fs2 = frozenset(s2)
+print('fs1',fs1)
+print('fs2',fs2)
+d = {'fs1':fs1,'fs2':fs2}
+print(d)
 
 
