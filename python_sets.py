@@ -139,9 +139,52 @@ s = {1,2,3,4,5}
 print('update method')
 print('s',s)
 s.update([6,7,8,9,10])
-print('s.update([6,7,8,9,10])',s)
+print('s.update([6,7,8,9,10])',s,end='\n\n')
 
+# Consider example below, showing addition, removal,discard and clear operations.
+s1 = set()
+s1.add(1)
+s1.add(2)
+s1.add(3)
+s1.add(4)
+print(s1)
+s1.remove(4)
+print('s1.remove(4)',s1)
+s1.discard(3)
+print('s1.discard(3)',s1)
+s1.clear()
+print('s1.clear()',s1,end='\n\n')
 
+# The following example demonstrates some simple set operations and their result.
+s1 = {'ab',3,4,(5,6)}
+s2 = {'ab',7,(7,6)}
+print('s1',s1)
+print('s2',s2)
+s = s1 - s2 # same as s1.difference(s2)
+print('s1-s2',s)
+print('s1.intersection(s2)',s1.intersection(s2))
+print('s1.union(s2)',s1.union(s2),end='\n\n')
+
+# Notice that the `set` object does not care that its members are not all of the same type,
+# as long as they are all immutable. If you try to use a mutable object such as a list or dictionary in a set,
+# you will receive an unhashable type error. Hashable types all have a hash value that does not change throughout
+# the lifetime of the instance. All built-in mutable types are not hashable, so they can not be used as elements 
+# of sets or keys to dictionaries.
+
+# Notice also in the preceding code that when we print out the union of s1 and s2, there is only one element
+# with the value 'ab'. This is a natural property of sets in that they do not include duplicates.
+# In addtion to these built-in methods, there are a number of other operations we can perform on sets. Example to
+# test for membership of a set use the following.
+
+print("test membership")
+print('ab in s1', 'ab' in s1)
+print('ab not in s1','ab' not in s1,end='\n\n')
+
+# We can loop through elements in set as follows.
+print("loop set elements")
+print('s1',s1)
+for element in s1:
+    print(element)
 
 
 
