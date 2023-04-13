@@ -105,7 +105,42 @@ s = {2,4,6,8}
 print("discard method")
 print('s',s)
 s.discard(8)
-print('s.discard(8)',s)
+print('s.discard(8)',s,end='\n\n')
+# 5. s.intersection_update(t) => Romoves the items from the set,`s` which are not in the intersection of the sets,`s` and `t`
+s = {1,2,3,4,5,6}
+t = {2,4,6,8}
+print("intersetion_update method")
+print('s',s)
+print('t',t)
+s.intersection_update(t)
+print('s.intersection_update(t)',s,end='\n\n')
+# 6. s.pop() => Returns an arbitrary item from the set,`s` and it removes it from the `s` set
+print('pop method')
+s = {1,2,3,4,5}
+print('s',s)
+print('s.pop()',s.pop())
+print('s',s,end='\n\n')
+# 7. s.remove(item) => Deletes the item from the `s` set.
+s = {1,2,3,4,5}
+print('remove method')
+print('s',s)
+s.remove(3)
+print('s.remove(3)',s,end='\n\n')
+# 8. s.symmetric_difference_update(t) => Deletes all of the elements from the `s` set that are not in the symmetric difference of the sets,`s` and `t`
+s = {1,2,3,4,5,6}
+t = {2,4,6,8}
+print('symmetric_difference_update method')
+print('s',s)
+print('t',t)
+s.symmetric_difference_update(t)
+print('s.symmetric_difference_update(t)',s,end='\n\n')
+# 9. s.update(t) => Appends all of the items in an iterable object,t,to the set,s
+s = {1,2,3,4,5}
+print('update method')
+print('s',s)
+s.update([6,7,8,9,10])
+print('s.update([6,7,8,9,10])',s)
+
 
 
 
