@@ -7,3 +7,8 @@
 # performed on data. They are defined by their behaviour rather than their implementation. In addition
 # to the ADTs that we have looked at, there are several Python libraries that provide extensions to the
 # built-in data-types.
+
+# Collections
+# This module provides more specialized, high performance alternatives for the built-in data types
+# as well as the utility function to create a named tuples.
+# Below shows datatypes and operations of the collections module and their description.
