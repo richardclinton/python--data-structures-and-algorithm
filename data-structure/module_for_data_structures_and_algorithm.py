@@ -12,3 +12,12 @@
 # This module provides more specialized, high performance alternatives for the built-in data types
 # as well as the utility function to create a named tuples.
 # Below shows datatypes and operations of the collections module and their description.
+# 1. namedtuple() => Creates tuple subclasses with named fields
+# 2. deque => Lists with fast appends and pops either end.
+# 3. chainMap => Dictionary-like class tp create a single view of multiple mapping
+# 4. Counter => Dictionary subclass for counting hashable objects
+# 5. OrderedDict => Dictionary subclass that remembers the entry order.
+# 6. defaultdict => Dictionary subclass that calls a function to supply missing values.
+# 7. UserDict,UserDict,UserString => These three data types are simply wrappers for their
+#    underlying base classes. Their use has largely been supplanted by the ability to subclass
+#    their respective base class directly. Can be used to access the underlying objects as an attribute.
