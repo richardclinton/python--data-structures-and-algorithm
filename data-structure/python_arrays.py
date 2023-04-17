@@ -37,3 +37,32 @@
 # 16. a.tofile(f) => Writes all the element to the f file object
 # 17. a.tolist() => Converts the array into list.
 # 18. a.tounicode() => Converts an array of the `u` type into a unicode string
+
+# Array objects support all of the normal sequence oparations such as indexing, slicing,
+# concatenation and multiplication.
+
+# Using arrays, as opposed to lists, is much more efficient way of storing data that
+# is of the same type. In the following example, we have created an interger array from 0
+# to one million minus 1, and an identical list. String one million integers in an integer array
+# requires around 90% of the memory of an equivalent list.
+
+import array
+import sys
+ba = array.array('i', range(10**6))
+bl = list(range(10**6))
+my_size = 100*sys.getsizeof(ba)/sys.getsizeof(bl)
+print(my_size, end='\n\n')
+
+# Because we are interested in saving space, that is, we are dealing with large
+# datasets and limited memory size, we ussuanly perform in-place operations on arrays
+# and only creates copies when we need to.
+# Typically, enumarate is used to perform an operation on each element. In the following 
+# snippet, we perform the simple operation of adding one to each item in the array.
+
+# It should be noted that when performing operations on arrays that creates lists, such as
+# list comprehension, the memory efficiency gains of using an array in the first place
+# will be negated. When we need to create a new data object, a solution is to use generator
+# expression to perform the operation.
+
+# Arrays created with this module are unsuitable for work that requires a matrix of vector
+# operations
