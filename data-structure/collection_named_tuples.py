@@ -20,6 +20,16 @@ print('s1.x*s1.y*s1.z',s1.x*s1.y*s1.z,end='\n\n') # calculate the volume
 # an underscore to prevent potential conflicts with field names. The `_make()` method takes 
 # an iterable as an argument and turns it into a namedtuple object, as in the following example.
 s1 = [4,5,6]
-s1 = space._make(s1)
-print('s1',s1)
-print('s1._1',s1._1)
+s2 = space._make(s1)
+print('s2',s2)
+print('s1._1',end='\n\n')
+
+# The `_asdict` method returns an orderedDict object with the field names mapped
+# to index keys and the values mapped to the dictonary values.
+# The `_replace` method returns a new instance of the tuple, replacing the specified values
+# In addition, `_fields` returns the tuple of string listing the fields names. The `_fields_defaults`
+# method provides dictionary mapping field names to default values. Consider the example code snippet.
+print('s2._asdict()',s2._asdict())
+print('s1._replace(x=7,z=9)',s2._replace(x=7,z=9))
+print('space._fields',space._fields)
+print('space._field_defaults',space._field_defaults)
